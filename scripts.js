@@ -1,8 +1,8 @@
 // scripts.js
 
-// IMPORTANT: use the EXACT backend URL from Azure (Default domain)
-// copy it from: Azure Portal → demoweb-backend-japhridze → Overview → Default domain
-const BACKEND_URL = "https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net";
+// ✅ make sure this is EXACTLY your working backend URL
+const BACKEND_URL =
+  "https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const messageBox = document.createElement("div");
@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.body.appendChild(messageBox);
 
   try {
+    console.log("Calling backend root:", `${BACKEND_URL}/`);
     const response = await fetch(`${BACKEND_URL}/`);
     const data = await response.json();
-    messageBox.textContent = data.message;
+    messageBox.textContent = data.message || "Backend responded.";
   } catch (error) {
     console.error("Startup backend check failed:", error);
     messageBox.textContent = "⚠️ Backend not reachable.";
@@ -25,9 +26,9 @@ async function sayHello() {
   const result = document.getElementById("result");
 
   try {
-    const response = await fetch(
-      `${BACKEND_URL}/hello?name=${encodeURIComponent(name)}`
-    );
+    const url = `${BACKEND_URL}/hello?name=${encodeURIComponent(name)}`;
+    console.log("Calling hello endpoint:", url);
+    const response = await fetch(url);
     const data = await response.json();
     result.textContent = data.message;
   } catch (error) {
