@@ -2,7 +2,9 @@
 
 // ✅ make sure this is EXACTLY your working backend URL
 const BACKEND_URL =
-  "https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net";
+  "https://demoweb-backend-japhridze-erapahhqhqajfbha.centralus-01.azurewebsites.net";
+
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   const messageBox = document.createElement("div");
