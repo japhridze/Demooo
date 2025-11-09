@@ -1,130 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="googlea36837ec178857f3" />
+  <title>Japaridze Properties</title>
 
+  <!-- your css -->
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
 
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="googlea36837ec178857f3" />
-
-    <title>Japaridze Properties </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="scripts.js" defer></script>
+  <!-- JS that talks to backend -->
+  <script src="scripts.js" defer></script>
 </head>
 <body>
+  <!-- Navbar with Logo Image and Language Switcher -->
+  <header>
+    <div class="background"></div>
+    <div class="content">
+      <div class="logo">
+        <img src="./imgs/logo.png" alt="Company Logo" class="logo-img" />
+        <h1>Japaridze Properties</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#home-intro">About Us</a></li>
+          <li><a href="#about-text">Mission Statement</a></li>
+          <li><a href="#mission-text">Location</a></li>
+          <li><a href="#location-text">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+        <button class="lang-btn" onclick="changeLanguage('ge')">ქართული</button>
+        <button class="lang-btn" onclick="changeLanguage('ru')">Русский</button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Navbar with Logo Image and Language Switcher -->
-    <header>
-        <div class="background"></div>
-        <div class="content">
+  <!-- Home Section -->
+  <section id="home">
+    <img src="./imgs/1.jpg" alt="Construction Project Image" class="hero" />
+    <p
+      id="home-intro"
+      data-en="Welcome to , we specialize in high-quality  projects..."
+      data-ge="მოგესალმებით , ჩვენ ვმუშაობთ მაღალი ხარისხის  პროექტებზე..."
+      data-ru="Добро пожаловать , мы специализируемся на высококачественных  проектах..."
+    >
+      Welcome to , we specialize in high-quality projects...
+    </p>
+  </section>
 
-            <div class="logo">
-                <img src="./imgs/logo.png" alt="Company Logo" class="logo-img">
-                <h1>Japaridze Properties </h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#home-intro">About Us</a></li>
-                    <li><a href="#about-text">Mission Statement</a></li>
-                    <li><a href="#mission-text">Location</a></li>
-                    <li><a href="#location-text">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-switcher">
-                <button class="lang-btn" onclick="changeLanguage('en')">English</button>
-                <button class="lang-btn" onclick="changeLanguage('ge')">ქართული</button>
-                <button class="lang-btn" onclick="changeLanguage('ru')">Русский</button>
-            </div>
-        </div>
-    </header>
+  <!-- About Us Section -->
+  <section id="about">
+    <img src="./imgs/2.jpg" alt="About Company" />
+    <h2 id="about-title" data-en="About Us" data-ge="ჩვენ შესახებ" data-ru="О нас">
+      About Us
+    </h2>
+    <p
+      id="about-text"
+      data-en="Your company's background information..."
+      data-ge="თქვენი კომპანიის ფონის ინფორმაცია..."
+      data-ru="Информация о вашей компании..."
+    >
+      Your company's background information...
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      distinctio nobis delectus porro at numquam! Voluptate corrupti aliquid
+      fugiat non magni dignissimos nemo, provident quasi accusamus, harum
+      perferendis nam, nulla eos voluptatibus corporis dolore deleniti sed
+      veniam? Officia quia ab aliquam mollitia adipisci, minima tempora atque
+      impedit sapiente ducimus ex nesciunt quasi fugit ipsa sint magnam veniam
+      laboriosam est delectus dignissimos. Earum harum repudiandae consequatur
+      ut. Rerum, adipisci odit! Officiis nostrum vel nobis culpa sunt?
+    </p>
+  </section>
 
-    <!-- Home Section -->
-    <section id="home">
-        <img src="./imgs/1.jpg" alt="Construction Project Image" class="hero">
-        <p id="home-intro" data-en="Welcome to , we specialize in high-quality  projects..."
-           data-ge="მოგესალმებით , ჩვენ ვმუშაობთ მაღალი ხარისხის  პროექტებზე..."
-           data-ru="Добро пожаловать , мы специализируемся на высококачественных  проектах...">
-           Welcome to , we specialize in high-quality  projects...
-        </p>
-    </section>
+  <!-- Mission Statement Section -->
+  <section id="mission-statement">
+    <img src="./imgs/3.jpg" alt="mission" />
+    <h2
+      id="mission-title"
+      data-en="Mission Statement"
+      data-ge="მისიის განცხადება"
+      data-ru="Миссия"
+    >
+      Mission Statement
+    </h2>
+    <p
+      id="mission-text"
+      data-en="Our mission is to deliver top-quality construction services..."
+      data-ge="ჩვენი მისია არის უზრუნველვყოთ მაღალი ხარისხის  მომსახურება..."
+      data-ru="Наша миссия — предоставлять высококачественные  услуги..."
+    >
+      Our mission is to deliver top-quality services...
+    </p>
+  </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <img src="./imgs/2.jpg" alt="About Company">
-        <h2 id="about-title" data-en="About Us" data-ge="ჩვენ შესახებ" data-ru="О нас">About Us</h2>
-        <p id="about-text" data-en="Your company's background information..."
-           data-ge="თქვენი კომპანიის ფონის ინფორმაცია..."
-           data-ru="Информация о вашей компании...">
-           Your company's background information...
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis distinctio nobis delectus porro at numquam! Voluptate corrupti aliquid fugiat non magni dignissimos nemo, provident quasi accusamus, harum perferendis nam, nulla eos voluptatibus corporis dolore deleniti sed veniam? Officia quia ab aliquam mollitia adipisci, minima tempora atque impedit sapiente ducimus ex nesciunt quasi fugit ipsa sint magnam veniam laboriosam est delectus dignissimos. Earum harum repudiandae consequatur ut. Rerum, adipisci odit! Officiis nostrum vel nobis culpa sunt?
-        </p>
-    </section>
+  <!-- Location Section -->
+  <section id="location">
+    <img src="./imgs/4.jpg" alt="location" />
+    <h2
+      id="location-title"
+      data-en="Location"
+      data-ge="ლოკაცია"
+      data-ru="Местоположение"
+    >
+      Location
+    </h2>
+    <p
+      id="location-text"
+      data-en="Address: 123 Street, Batumi, Georgia"
+      data-ge="მისამართი: 123 ქუჩა, ბათუმი, საქართველო"
+      data-ru="Адрес: ул. 123, Батуми, Грузия"
+    >
+      Address: 123 Street, Batumi, Georgia
+    </p>
+  </section>
 
-    <!-- Mission Statement Section -->
-    <section id="mission-statement">
-        <img src="./imgs/3.jpg" alt="mission">
-        <h2 id="mission-title" data-en="Mission Statement" data-ge="მისიის განცხადება" data-ru="Миссия">Mission Statement</h2>
-        <p id="mission-text" data-en="Our mission is to deliver top-quality construction services..."
-           data-ge="ჩვენი მისია არის უზრუნველვყოთ მაღალი ხარისხის  მომსახურება..."
-           data-ru="Наша миссия — предоставлять высококачественные  услуги...">
-           Our mission is to deliver top-quality  services...
-        </p>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="phonemail">
+      <h2
+        id="contact-title"
+        data-en="Contact Us"
+        data-ge="დაგვიკავშირდით"
+        data-ru="Связаться с нами"
+      >
+        Contact Us
+      </h2>
+      <p
+        id="email"
+        data-en="Email: info@yourcompany.com"
+        data-ge="ელფოსტა: info@yourcompany.com"
+        data-ru="Эл. почта: info@yourcompany.com"
+      >
+        <i class="fa-solid fa-envelope"></i> Email: info@yourcompany.com
+      </p>
+      <p
+        id="phone"
+        data-en="Phone: +123 456 7890"
+        data-ge="ტელეფონი: +123 456 7890"
+        data-ru="Телефон: +123 456 7890"
+      >
+        <i class="fa-solid fa-phone"></i> Phone: +123 456 7890
+      </p>
+    </div>
+    <div class="socials">
+      <h2 id="social" data-en="Follow us on:" data-ge="გამოგვყევით:" data-ru="Подписывайтесь на нас:">
+        Follow us on
+      </h2>
+      <div>
+        <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <footer>
+    <p>© 2024 Japaridze Properties Incorporation. All Rights Reserved.</p>
 
-    <!-- Location Section -->
-    <section id="location">
-        <img src="./imgs/4.jpg" alt="location">
-        <h2 id="location-title" data-en="Location" data-ge="ლოკაცია" data-ru="Местоположение">Location</h2>
-        <p id="location-text" data-en="Address: 123 Street, Batumi, Georgia"
-           data-ge="მისამართი: 123 ქუჩა, ბათუმი, საქართველო"
-           data-ru="Адрес: ул. 123, Батуми, Грузия">
-           Address: 123 Street, Batumi, Georgia
-        </p>
-    </section>
+    <!-- demo: connect to FastAPI backend -->
+    <div style="background: #000; color: #fff; padding: 8px; margin-top: 8px;">
+      <input id="nameInput" placeholder="Enter your name" />
+      <button onclick="sayHello()">Send</button>
+      <p id="result" style="margin-top: 6px; color: #ffd800;"></p>
+    </div>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="phonemail">
-            <h2 id="contact-title" data-en="Contact Us" data-ge="დაგვიკავშირდით" data-ru="Связаться с нами">Contact Us</h2>
-            <p id="email" data-en="Email: info@yourcompany.com" data-ge="ელფოსტა: info@yourcompany.com" data-ru="Эл. почта: info@yourcompany.com">
-                <i class="fa-solid fa-envelope"></i> Email: info@yourcompany.com
-            </p>
-            <p id="phone" data-en="Phone: +123 456 7890" data-ge="ტელეფონი: +123 456 7890" data-ru="Телефон: +123 456 7890">
-                <i class="fa-solid fa-phone"></i> Phone: +123 456 7890
-            </p>
-        </div>
-        <div class="socials">
-            <h2 id="social" data-en="Follow us on:" data-ge="გამოგვყევით:" data-ru="Подписывайтесь на нас:">Follow us on</h2>
-            <div>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 Japaridze Properties Incorporation. All Rights Reserved.</p>
-    </footer>
-    <script>
-        function changeLanguage(language) {
-            const elements = document.querySelectorAll("[data-en]"); // Select elements with translations
-            elements.forEach(el => {
-                const translation = el.getAttribute(`data-${language}`);
-                if (translation) { // Check if the translation exists
-                    el.innerText = translation; // Update text based on selected language
-                }
-            });
+  <!-- language change script -->
+  <script>
+    function changeLanguage(language) {
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach((el) => {
+        const translation = el.getAttribute(`data-${language}`);
+        if (translation) {
+          el.innerText = translation;
         }
-        </script>
- <input id="nameInput" placeholder="Enter your name" />
-<button onclick="sayHello()">Send</button>
-<p id="result"></p>
-
-        
+      });
+    }
+  </script>
 </body>
 </html>
