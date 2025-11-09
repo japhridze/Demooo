@@ -10,6 +10,6 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-@app.get("/hello")
-def hello(name: str = "Tornike"):
-    return {"message": f"Hello, {name}! Backend is working and ✅  we contact you soon, thank you for you attentions"}
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "FastAPI on Azure is running 🚀"}
