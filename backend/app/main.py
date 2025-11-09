@@ -5,20 +5,16 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# IMPORTANT: put here your real Static Web App URL
-# you can keep "*" too, but let’s be explicit
-origins = [
-    "https://witty-pebble-0066f710.3.azurestaticapps.net",  # your frontend
-    "https://witty-pebble-0066f710.azurestaticapps.net",    # sometimes without the .3
-    "http://localhost:8000",
-    "http://localhost:5500",
-    "*",  # last resort
+# your frontend runs here (you showed it in the screenshot)
+ALLOWED_ORIGINS = [
+    "https://witty-pebble-0066f710.3.azurestaticapps.net",
+    "https://witty-pebble-0066f710.azurestaticapps.net",  # some SWA urls come without the .3
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,      # keep this False so CORS is happy
     allow_methods=["*"],
     allow_headers=["*"],
 )
