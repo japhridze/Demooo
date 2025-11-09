@@ -1,20 +1,13 @@
-# backend/app/main.py
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# your frontend runs here (you showed it in the screenshot)
-ALLOWED_ORIGINS = [
-    "https://witty-pebble-0066f710.3.azurestaticapps.net",
-    "https://witty-pebble-0066f710.azurestaticapps.net",  # some SWA urls come without the .3
-]
-
+# 🔓 super-permissive CORS just to make the browser stop complaining
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
-    allow_credentials=False,      # keep this False so CORS is happy
+    allow_origins=["*"],      # allow requests from anywhere (your static site included)
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
