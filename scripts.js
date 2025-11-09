@@ -1,4 +1,4 @@
-// 👇 must be EXACTLY the working backend URL
+// 👇 exactly the backend URL that worked in your browser
 const BACKEND_URL = "https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net";
 
 document.addEventListener("DOMContentLoaded", async () => {
