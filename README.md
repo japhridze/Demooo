@@ -18,6 +18,28 @@ The goal was to connect a responsive frontend with a live FastAPI backend hosted
 | ⚙️ **Backend (FastAPI App Service)** | [https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net](https://demoweb-backend-japhridze-erapahhhqajfbha.centralus-01.azurewebsites.net) |
 
 ---
+---
+
+## 🧱 Infrastructure as Code (Terraform)
+
+To align with industry DevOps practices, the backend infrastructure (App Service, Resource Group, and Service Plan) can be provisioned using **Terraform**.
+
+### Terraform Overview
+- Provider: `azurerm`
+- Resources: 
+  - `azurerm_resource_group`
+  - `azurerm_service_plan`
+  - `azurerm_linux_web_app`
+- Location: `Central US`
+- Python Runtime: `3.11`
+
+### Deployment Commands
+```bash
+cd infra
+terraform init
+terraform plan
+terraform apply
+
 
 ## 🧩 Project Structure
 
